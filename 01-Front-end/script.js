@@ -1,7 +1,7 @@
 //Navegação por Tab
 
 const tabMenu = document.querySelectorAll(".js-tabmenu li");
-const tabContent = document.querySelectorAll('.js-tabcontent');
+const tabContent = document.querySelectorAll('.js-tabcontent section');
 
 
 // verificação com IF para fins de manter a modificação no CSS
@@ -21,4 +21,4 @@ if( tabMenu.length && tabContent.length){
       activeTab(index);
     });
   });
-}
+};
