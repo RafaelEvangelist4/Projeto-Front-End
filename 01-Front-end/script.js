@@ -61,3 +61,23 @@ initAccordion();
 linksInternos.forEach ((links)=>{
   links.addEventListener("click", scrollToSection);
 });
+function InitAnimaScroll (){
+const sections = document.querySelectorAll(".js-scroll");
+if(sections.length){
+const windowMetade = window.innerHeight * 0.6;
+
+function animaScroll (){
+  sections.forEach((section)=>{
+    const sectionTop = section.getBoundingClientRect().top;
+    const seVisivel = (sectionTop - windowMetade) <0;
+    if(seVisivel){
+      section.classList.add("ativo");
+    };
+  });
+};
+animaScroll();
+
+window.addEventListener("scroll", animaScroll);
+};
+};
+InitAnimaScroll();
